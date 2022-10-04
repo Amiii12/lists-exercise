@@ -56,10 +56,7 @@ namespace Models
             {
                 Int32 number = this.numberList[index];
 
-                if (
-                    this.IsEven(this.numberList[index]) &&
-                    this.IsMultipleOf(index, multiple)
-                )
+                if (this.IsEven(number) && this.IsMultipleOf(index, multiple))
                     Console.WriteLine(number);
             }
         }
