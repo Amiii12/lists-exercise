@@ -47,16 +47,16 @@ namespace Models
             return number % multiple == 0;
         }
 
-        /// <summary>Show pairs in multiples of (number)</summary>
+        /// <summary>Show pairs in multiples of (multiple)</summary>
         public void ShowPairsInMultiplesOf(Int32 multiple)
         {
-            Int32 index = 0;
+            Int32 index = multiple;
 
-            while (++index < this.numberList.Count)
+            for (;index < this.numberList.Count; index += multiple)
             {
                 Int32 number = this.numberList[index];
 
-                if (this.IsEven(number) && this.IsMultipleOf(index, multiple))
+                if (this.IsEven(number))
                     Console.WriteLine(number);
             }
         }
